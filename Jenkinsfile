@@ -2,10 +2,13 @@ pipeline {
     agent any
     
     stages {
-        stage('Clone') {
-            steps {
-                git 'https://github.com/SUNILKUMAR-12345/my-python-app-'
-            }
+       stage('Clone') {
+    steps {
+        git branch: 'main',
+            url: 'https://github.com/SUNILKUMAR-12345/my-python-app-'
+    }
+}
+
         }
         
         stage('Build Docker Image') {
